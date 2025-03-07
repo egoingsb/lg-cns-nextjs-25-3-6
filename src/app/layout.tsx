@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
+import { Counter } from "./control";
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -44,15 +45,7 @@ export default async function RootLayout({
                     <ol>{tags}</ol>
                     {children}
                     <ul>
-                        <li>
-                            <Link href="/create">create</Link>
-                        </li>
-                        <li>
-                            <Link href="/update/id">update</Link>
-                        </li>
-                        <li>
-                            <button>Delete</button>
-                        </li>
+                        <Counter />
                     </ul>
                 </div>
             </body>
