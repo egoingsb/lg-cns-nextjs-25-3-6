@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
-import { useState } from "react";
 
 export const metadata: Metadata = {
     title: "Create Next App",
