@@ -20,6 +20,7 @@ export default function Create() {
         const result = await resp.json();
         const lastCreatedId = result.id;
         router.push(`/read/${lastCreatedId}`);
+        router.refresh();
     };
     return (
         <div>
