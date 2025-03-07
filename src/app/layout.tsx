@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
-import { Counter } from "./control";
+import { Counter } from "./Control";
 
 export const metadata: Metadata = {
     title: "Create Next App",
