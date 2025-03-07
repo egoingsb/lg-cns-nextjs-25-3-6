@@ -13,10 +13,21 @@ export function Counter() {
                 <Link href="/create">create</Link>
             </li>
             <li>
-                <Link href="/update/id">update</Link>
+                <Link href={`/update/${params.id}`}>update</Link>
             </li>
             <li>
-                <button>Delete</button>
+                <button
+                    onClick={async () => {
+                        await fetch(
+                            "http://localhost:9999/topics/" + params.id,
+                            {
+                                method: "DELETE",
+                            }
+                        );
+                    }}
+                >
+                    Delete
+                </button>
             </li>
         </>
     );
